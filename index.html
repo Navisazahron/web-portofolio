@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="navigasi">
+        <div class="logo">
+            <h2>Portofolio</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#kontak">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="navisaa.jpg" alt="Banner Image" class="banner-img">
+        <h1> Halo Selamat Datang</h1>
+        <p>"Anda sedang mengunjungi portofolio pribadi saya, tempat di mana impian diwujudkan dalam kode dan desain."</p>
+        <a href="#about-me" class="large-button">Selengkapnya</a>
+    </div>
+
+    <div id="about-me" class="about-me">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="navisaa.jpg" alt="Foto Zahron Navisa">
+            </div>
+            <p> Haloo Saya Zahron Navisa, Saya adalah seorang pelajar yang tengah menantang diri dalam belajar software. Setiap hari,
+                saya mengeksplorasi dunia yang luas ini, menyerap pengetahuan baru tentang coding, algoritma, dan teknologi. Meski masih dalam proses belajar, saya bersemangat untuk mengembangkan keterampilan ini dan mengubah ide-ide menjadi kenyataan melalui pemrograman. Bersiaplah untuk menjadi yang terbaik di masa depan!</p>
+        </div>
+    </div>
+
+    <div id="pendidikan" class="box-pendidikan">
+        <h1>Pendidikan</h1>
+
+        <div class="edu-container">
+            <div class="box-kiri">
+                <img src="sd.jpg" alt="Sekolah Dasar" class="edu-img"/>
+                <h3>Sekolah Dasar</h3>
+                <p>Saya Bersekolah di SDN Bokor Kec.Tumpang</p>
+            </div>
+
+            <div class="box-tengah">
+                <img src="smp.png" alt="SMP" class="edu-img"/>
+                <h3>Sekolah Menengah Pertama</h3>
+                <p>Saya Bersekolah di SMPN 2 Pakis Kec.Pakis</p>
+            </div>
+
+            <div class="box-kanan">
+                <img src="smk.png" alt="SMK" class="edu-img"/>
+                <h3>Sekolah Menengah Keatas</h3>
+                <p>Saya masih melanjutkan sekolah di SMKN 6 MALANG Kota Malang</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="kontak" class="box-kontak">
+        <h1>Contact</h1>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="contact-form">
+                <div class="left-column">
+                    <label for="full-name">Full Name:</label><br>
+                    <input type="text" id="full-name" name="full-name" required><br>
+                    
+                    <label for="phonenumber">Phone Number:</label><br>
+                    <input type="tel" id="phonenumber" name="phonenumber" required><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                </div>
+                <div class="right-column">
+                    <label for="message">Type Your Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+                    <input type="submit" value="Send">
+                </div>
+            </div>
+            <input type="hidden" name="access_key" value="805edfb5-d416-4c0d-8204-db173ed29a13">
+        </form>
+    </div>
+    
+    
+    <footer class="footer">
+        <p>Copyright : Zahron Navisa</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var bannerTitle = document.querySelector('.banner h1');
+            var titles = [
+                ' Haloo Selamat Datang',
+                'Terima Kasih sudah melihat portofolio saya'
+            ];
+            var currentTitle = 0;
+            
+            function animateTitle() {
+                bannerTitle.textContent = titles[currentTitle];
+                currentTitle = (currentTitle + 1) % titles.length;
+            }
+            
+            setInterval(animateTitle, 20000); 
+    
+            setTimeout(function() {
+                bannerTitle.textContent = "Terima Kasih sudah melihat portofolio saya";
+            }, 20000);
+        });
+    </script>
+    
+</body>
+</html>
